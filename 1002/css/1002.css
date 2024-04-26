@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*所有元素 去除白匡跟邊角*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:rgba(254, 227, 224, 1);
+}
+
+/*nav bar*/
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100000; /*層疊順序 數值越大越上方*/
+
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box; /*版面不會被擠來擠去變形*/
+    background: rgba(253, 116, 104, .5); /*alpha是透明度*/
+}
+
+nav a{
+    padding: 20px; /*padding 可幫inline的a長胖*/
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+
+}
+nav a:hover{
+    color: rgba(144, 8, 150, 1);
+}
+
+
+section{
+    position: relative;
+    width: 80%;
+    height: 500px;
+    overflow: hidden; /*依照容器大小放進去*/
+    margin: 100px auto 0px;
+}
+
+.left{
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    left: 80px;
+    top: 100px;
+    padding: 30px;
+    z-index: 20;
+
+}
+.left h1{
+    font-size: 60px;
+    line-height: 1em;
+    padding-bottom: 20px;
+    color: rgba(253, 116, 104, .5);
+}
+
+.left p{
+    width: 80%;
+    color: rgba(144, 8, 150, 1);
+}
+
+.right{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+article{
+    width: 80%; /*配合上面*/
+    margin: auto;
+    margin-top: 20px;
+}
+
+.card{
+    float: left; /*元素從左開始排排站*/
+    box-sizing: border-box;
+    width: 33.33%; /*佔三分之一*/
+    text-align: center;
+    border: solid 5px rgba(254, 227, 224, 1);/*與border有關的都可以傳接*/
+    padding: 5px 0px; /*上下 左右*/
+
+    /*要做變化的地方*/
+    background: rgba(253, 116, 104, .5);
+    color: rgba(255, 255, 255, 1);
+
+    transition: background 1s, color 3s; /*放在這！才是雙向的 滑進滑出都漸變*/
+    -webkit-transition: background 1s, color 3s; /*前綴詞 避免不同瀏覽器不能使用*/
+
+}
+
+.card:hover{
+    cursor: pointer;
+    background: rgba(144, 8, 150, 1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+aside{
+    clear: both; /*在頁面使用到flot以下的內容都必須要*/
+    width: 80%;
+    margin: auto;
+}
+
+.wrap{
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border: solid 5px rgba(254, 227, 224, 1);
+}
+
+.tx_1, .tx_r{
+    float:left;
+}
+
+.tx_1{
+    width: 30%;
+}
+
+.tx_r{
+    width: 70%;
+}
+
+.tx_1 img{
+    display: block;
+    width: 100%;
+}
+
+.tx_r p{
+    line-height: 2em;
+    box-sizing: border-box;
+    color: rgba(144, 8, 150, 1);
+    padding: 0px 20px;
+}
+
+footer{
+    clear: both;
+    padding: 20px 0px;
+    text-align: center;
+    color: rgba(144, 8, 150, 1);
+}

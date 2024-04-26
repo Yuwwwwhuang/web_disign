@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0;
+	padding:0;
+	background: rgba(229,229,229,1);
+}
+
+::-moz-selection{
+	color: rgba(255, 255, 255, 1);
+	background: rgba(38, 70, 83, 1);
+}
+
+/*全域*/
+::selection{
+	color: rgba(255, 255, 255, 1);
+	background: rgba(38, 70, 83, 1);
+}
+
+header{
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+header img{
+	display: block;
+	padding: 20px;
+	margin: auto;
+}
+
+/* nav bar */
+nav{
+	padding:20px;
+	margin:auto;
+	text-align:center;
+	box-sizing:border-box;
+	background: rgba(38, 70, 83, 1);
+
+	position: -webkit-sticky; /*前綴詞 上下要一樣*/
+	position: sticky;
+	top: 0;
+	z-index: 2000;
+}
+
+nav a{
+	padding:20px;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: rgba(221,120,47,1);
+}
+
+section{
+	width: 80%;
+	margin: auto;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+}
+
+.box, .box1{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	background: rgba(255,255,255,1);
+	margin: 12px 0px 0px;
+	z-index: 10;
+	box-shadow: 2px 2px 8px rgba(173, 181, 189, 1);
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.box:hover, .box1:hover{
+	cursor: pointer;
+}
+
+.imgbox{
+	width: 100%;
+	overflow: hidden;
+}
+
+.box .imgbox img{
+	float: left;
+	width: 100%;
+
+	transform: scale(1,1);
+	-ms-transform: scale(1,1); /*IE 9*/
+	-webkit-transform: scale(1,1); /*Safari */
+
+	transition: transform 1.5s; /*transition寫在本體 在hover的話會只有單向*/
+	-webkit-transition: transform 1.5s;
+
+	transition-timing-function: ease-in-out; /*動畫樣式*/
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.box:hover .imgbox img{
+	transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
+}
+
+.box1 .imgbox img{
+	float: left;
+	width: 100%;
+
+	transform: rotate(0deg);
+	-ms-transform: rotate(0deg); /*IE 9*/
+	-webkit-transform: rotate(0deg); /*Safari */
+
+	transition: transform 1.5s; /*transition寫在本體 在hover的話會只有單向*/
+	-webkit-transition: transform 1.5s;
+
+	transition-timing-function: ease-in-out; /*動畫樣式*/
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.box1:hover .imgbox img{
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.box h3, .box1 h3{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: rgb(221, 120, 47);
+}
+
+.box p, .box1 p{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: rgba(42, 157, 143, 1);
+}
+
+.head{
+	display: inline-block;
+	padding: 0px 20px 20px;
+}
+
+.head img{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%; /*原本正方形搭配50%可以變圓形 border-radiu處理圓弧*/
+}
+
+.head span{
+	float: left;
+	font-size: 13px;
+	color: rgba(42, 157, 143, 1);
+	line-height: 40px;
+	margin-left: 10px;
+}
+
+aside{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100000;
+}
+
+.totop{
+	width: 44px;
+	height: 44px;
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: 0px 0px;
+}
+.top:hover{
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: -44px 0px;
+}
+
